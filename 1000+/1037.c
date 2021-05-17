@@ -1,26 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <string.h>
 
 int main(void) {
-	char res[51] = { 0 };
-	char alp[51] = { 0 };
-	int n, len;
-	scanf("%d", &n);
+    int t, a, i, j, tmp;
+    long long sum = 0;
+    int arr[51] = { 0 };
+    scanf("%d", &t);
 
-	scanf("%s", res);
-	len = strlen(res);
+    for (i = 0; i < t; i++) {
+        scanf("%d", &a);
+        arr[i] = a;
+    }
 
-	for (int i = 0; i < n - 1; i++) {
-		scanf("%s", alp);
+    for (i = 0; i < t - 1; i++) {
+        for (j = 0; j < t - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+            }
+        }
+    }
 
-		for (int i = 0; i < len; i++) {
-			if (res[i] != alp[i]) {
-				res[i] = '?';
-			}
-		}
-	}
-
-	printf("%s", res);
-	return 0;
+    sum = arr[t - 1] * arr[0];
+    printf("%lld", sum);
+    return 0;
 }
