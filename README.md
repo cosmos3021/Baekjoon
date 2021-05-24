@@ -2,8 +2,8 @@
 
 It's my workspace to solve problems of Baekjoon Online Judge.
 
-= memo =
-== qsort ==
+== memo ==
+=== qsort ===
 void qsorttt(int * arr, int left, int right) {
 	if (left >= right) return 0;
 
