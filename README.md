@@ -10,7 +10,7 @@ void qsorttt(int * arr, int left, int right) {
 	int pivot = left, L = left + 1, R = right, tmp;
 
 	while (L <= R) {
-		while (L <= R && arr[L] <= arr[pivot]) L++;
+		while (L <= right && arr[L] <= arr[pivot]) L++;
 		while (R > left && arr[R] >= arr[pivot]) R--;
 		if (L > R) {
 			tmp = arr[R];
