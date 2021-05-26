@@ -12,17 +12,11 @@ int main(void) {
 		scanf("%s %s", arr1, arr2);
 		len = strlen(arr1);
 		for (int i = 0; i < len; i++) {
-			if ((int)arr1[i] <= (int)arr2[i]) {
-				dis[i] = (int)arr2[i] - (int)arr1[i];
-			}
-			else {
-				dis[i] = (int)arr2[i] - (int)arr1[i] + 26;
-			}
+			if ((int)arr1[i] <= (int)arr2[i]) dis[i] = (int)arr2[i] - (int)arr1[i];
+			else dis[i] = (int)arr2[i] - (int)arr1[i] + 26;
 		}
 		printf("Distances:");
-		for (int i = 0; i < len; i++) {
-			printf(" %d", dis[i]);
-		}
+		for (int i = 0; i < len; i++) printf(" %d", dis[i]);
 		printf("\n");
 	}
 	return 0;
