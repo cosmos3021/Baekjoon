@@ -9,8 +9,10 @@ int main(void) {
 		b = a;
 		a = tmp;
 	}
+
 	if (a == b) printf("0\n");
 	else printf("%lld\n", a - b - 1);
+
 	for (long long i = b + 1; i < a; i++) {
 		printf("%lld ", i);
 	}
