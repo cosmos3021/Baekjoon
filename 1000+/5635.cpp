@@ -33,6 +33,7 @@ int main(void) {
 			else if (psn[j] > min[j]) break;
 		}
 	}
+
 	cout << M << endl << m << endl;
 	return 0;
 }
